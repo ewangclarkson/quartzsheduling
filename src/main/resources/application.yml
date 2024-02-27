@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:quartz
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+#    properties:
+#      org:
+#        quartz:
+#          jobStore:
+#            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+#            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+#            dataSource: quartzDataSource
+#          dataSource:
+#            quartzDataSource:
+#              driver: org.h2.Driver
+#              URL: jdbc:h2:mem:quartz
+#              user: sa
+#              password: password
+server:
+  port: 8081
